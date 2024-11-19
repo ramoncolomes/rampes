@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block title %}
+    Cotxe
+{% endblock %}
+
+{% block main %}
+
+<section>
+    <div class="row my-0">
+        <img class="img-fluid" src="/static/cotxe1.png">
+    </div>
+    <form id="f_cotxe" action="cotxe" method="POST">
+        <div class="d-flex">
+            <label class="col-2 my-1 fw-bold p-1 mx-0 px-0" for="b">B=</label>
+            <input class="form-control w-50 fw-bold my-1 mx-0" id="b" name="b" onkeydown="cotxe()" placeholder="b en mm." type="number" min="1" value="{{session['cotxe_b']}}" >
+            <span class="p-2 fw-bold mx-0 my-1">mm.</span>
+        </div>
+        <div class="d-flex">
+            <label class="col-2 my-1 fw-bold p-1 mx-0 px-0" for="p">P=</label>
+            <input class="form-control w-50 fw-bold my-1 mx-0" id="p" name="p" onkeydown="cotxe()"  placeholder="P en mm." type="number" min="1" value="{{session['cotxe_p']}}" >
+            <span class="p-2 fw-bold mx-0 my-1">mm.</span>
+        </div>
+        <div class="d-flex">
+            <label class="col-2 my-1 fw-bold p-1 mx-0 px-0" for="ec">EC=</label>
+            <input class="form-control w-50 fw-bold my-1 mx-0" id="ec" name="ec" onkeydown="cotxe()"  placeholder="EC en mm." type="number" min="1" value="{{session['cotxe_ec']}}" >
+            <span class="p-2 fw-bold mx-0 my-1">mm.</span>
+        </div>
+        <div class="d-flex">
+            <label class="col-2 my-1 fw-bold p-1 mx-0 px-0" for="m">M=</label>
+            <input class="form-control w-50 fw-bold my-1 mx-0" id="m" name="m" onkeydown="cotxe()" placeholder="M en mm." type="number" min="1" value="{{session['cotxe_m']}}" >
+            <span class="p-2 fw-bold mx-0 my-1">mm.</span>
+        </div>
+        <div class="d-flex">
+            <label class="col-2 my-1 fw-bold p-1 mx-0 px-0" for="h">H=</label>
+            <input class="form-control w-50 fw-bold my-1 mx-0" id="h" name="h" onkeydown="cotxe()"  placeholder="H en mm." type="number" min="1" value="{{session['cotxe_h']}}" >
+            <span class="p-2 fw-bold mx-0 my-1">mm.</span>
+        </div>
+        <div class="d-flex">
+            <label class="col-2 my-1 fw-bold p-1 mx-0 px-0" for="a">A=</label>
+            <input class="form-control w-50 fw-bold my-1 mx-0" id="a" name="a" onkeydown="cotxe()" placeholder="A en mm." type="number" min="1" value="{{session['cotxe_a']}}" >
+            <span class="p-2 fw-bold mx-0 my-1">mm.</span>
+        </div>
+
+        <hr class="my-0">
+        <p class="my-0"> Marge seguretat</p>
+        <div class="d-flex">
+            <label class="col-2 my-1 fw-bold p-1 mx-0 px-0" for="ms">Ms=</label>
+            <input class="form-control w-50 fw-bold my-1 mx-0" id="ms" name="ms" onkeydown="cotxe()" placeholder="marge seg en mm." type="number" min="1" value="40" >
+            <span class="p-2 fw-bold mx-0 my-1">mm.</span>
+        </div>
+        <button type="submit" class="btn btn-primary" name="validar" value="validar" >Validar</button>
+        <!--<button type="button" class="btn btn-primary" name="validar" value="validar" onclick="document.getElementById('1').value = true">Validar</button>-->
+        <button type="submit" class="btn btn-secondary position-absolute start-0" name="borrar" value="borra">Borrar valors</button>
+    </form>
+</section>
+{% endblock %}
+

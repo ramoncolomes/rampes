@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<div class="text-bg-primary mx-0 mt-0 p-1">
+    <p class="fs-1 fw-bold">Disseny de rampes extremes</p>
+</div>
+<section class="container-fluid   bg-info ">
+    <div class="row  text-start">
+        <div class="col-6 ">
+            <p class=" border-bottom"> Que fa el programa?</p>
+            <p class="mx-auto"> Aquest programa calcula el perfil d'una rampa de manera
+            que el cotxe no toqui al terra</p>
+        </div>
+        <div class="col-6 text-start">
+            <p class=" border-bottom"> Versio: <span class="fw-bold">1.0 de maig-2024</span></p>
+            <p class="mx-auto border-bottom"> Autor:<span class="fw-bold"> Ramon Colomés</span></p>
+            <p class="mx-auto border-bottom"> Situacio:<span class="fw-bold"> Solsona </span></p>
+
+        </div>
+    </div>
+</section>
+<div class="d-flex">
+    <form action="/" method="POST">
+        <button name="rampa" value="rampa" method="POST" type="submit" class="btn btn-primary ">Dades rampa</button>
+        <button name="cotxe" value="cotxe" method="POST" action="rampa"  type="submit" class="btn btn-primary ">Dades cotxe</button>
+    </form>
+</div>
+</form>
+{% endblock %}
+
