@@ -187,3 +187,6 @@ def calculs_resultats():
                       cotxe_m, cotxe_a, cotxe_ms)
         session['calcul'] = ret
         return ret
+
+if __name__ =='__main__':
+    app.run(host="0.0.0.0", port=5000)
